@@ -4,7 +4,7 @@ import CardsBtnComponent from "./cards_btn"
 
 export default class CardsComponent extends React.Component{
     createTips(tips){
-        if(tips){
+        if(tips && tips != 'undefined'){
             return(
                 <div className="tips">
                     <p>{tips}</p>
@@ -16,9 +16,6 @@ export default class CardsComponent extends React.Component{
         return(
             <div>{
                 this.props.sites.map((item, index) => {
-                    if(item.tips){
-
-                    }
                     return (
                         <Col xs={12} sm={12} md={8} xl={6} key={index} className="it_col">
                             <div className="it_card">

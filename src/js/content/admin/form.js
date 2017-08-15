@@ -74,7 +74,9 @@ class FormPageComponent extends React.Component {
                 values.desc = encodeURIComponent(values.desc);
                 values.img = encodeURIComponent(values.img);
                 values.link = encodeURIComponent(values.link);
-                values.tips = encodeURIComponent(values.tips);
+                if(values.tips){
+                    values.tips = encodeURIComponent(values.tips);
+                }
                 this.props.submitForm(values,this.state.code)
             }
         });
