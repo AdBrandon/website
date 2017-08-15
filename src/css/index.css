@@ -385,7 +385,6 @@
     height: auto;
 }
 .books .title{
-    /*display: none;*/
     color: rgba(0, 0, 0, 0.65);
     font-size: 12px;
     font-weight:normal;
@@ -429,17 +428,10 @@
         width: 100%;
     }
 }
-/*.books .ant-col-xs-12{*/
-    /*width: 30%;*/
-/*}*/
-
-
-
-
-
-
 .manageBtn{
-    float: right;
+    position: absolute;
+    top:0;
+    right: 0;
 }
 .form_box {
     margin: 0 auto;

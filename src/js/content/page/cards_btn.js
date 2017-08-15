@@ -16,13 +16,11 @@ class CardsBtnComponent extends React.Component{
     createManageBtn(title) {
         if (sessionStorage.v && sessionStorage.name) {
             return (
-                <div>
-                    <Button.Group className="manageBtn">
+                    <Button.Group>
                         {this.createConfirmBtn(title)}
                         <Button size="small" onClick={this.props.updateItem.bind(this,this.props.classes,title,this.props.didSite)}>修改</Button>
                         <Button type="danger" size="small" onClick={this.deleteItem.bind(this, title)}>删除</Button>
                     </Button.Group>
-                </div>
             )
         }
     }

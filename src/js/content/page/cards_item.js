@@ -28,7 +28,9 @@ export default class CardsComponent extends React.Component{
                                             <p><a href={item.link} target="_blank">{item.title}</a></p>
                                         </Tooltip>
                                     </div>
-                                    <CardsBtnComponent title={item.title} classes={this.props.classes} didSite={this.props.sites} confirm={this.props.confirm}/>
+                                    <div className="manageBtn">
+                                        <CardsBtnComponent title={item.title} classes={this.props.classes} didSite={this.props.sites} confirm={this.props.confirm}/>
+                                    </div>
                                     <div className="desc">
                                         <p>{item.desc}</p>
                                     </div>
