@@ -6,7 +6,7 @@ const APPCODE = ''
 //
 const website = {
     title:"前端导航",
-    logo:"./src/images/react.png",
+    logo:"./src/images/logo.png",
     source:"https://github.com/AdBrandon/NavWebsite",
     email:"admin@vmail.cc",
     github:"AdBrandon",
