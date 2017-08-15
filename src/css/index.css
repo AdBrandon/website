@@ -1,0 +1,498 @@
+/*初始化时显示优化*/
+.rightSide {
+    min-width: 100%;
+    min-height:100vh;
+    position: relative;
+}
+.ant-layout-content {
+    min-height: calc(100vh - 66px);
+}
+
+.aside {
+    min-height: 100vh;
+    position: fixed !important;
+    left: 0;
+    background-color: #404040 !important;
+    z-index: 5;
+}
+
+.rightSideBody{
+    margin: 8px;
+}
+
+.rightSide .lay_small .ant-layout-content,.rightSide .lay_small .footer{
+    padding-left: 64px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .rightSide .lay_big  .ant-layout-content,.rightSide .lay_big .footer{
+        padding-left: 64px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .rightSide .lay_big  .ant-layout-content,.rightSide .lay_big .footer{
+        padding-left: 200px;
+    }
+
+}
+
+#components-layout-demo-fixed-sider .logo {
+    height: 32px;
+    background: #333;
+    border-radius: 6px;
+    margin: 16px;
+}
+
+.logo img {
+    width: 90px;
+    margin-top: 20px;
+    margin-left: 55px;
+    transition: all 0.3s ease
+}
+
+.logo .logo_small {
+    width: 40px;
+    margin-top: 20px;
+    margin-left: 13px;
+}
+
+.logo_p {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.headerContent {
+    background-color: #404040;
+}
+
+.headerContent .headerMenu {
+    float: right;
+}
+.nav-admin{
+    margin-left: 40px;
+    float: left;
+    color: #404040;
+}
+.sourceCode {
+    margin-right: -10px;
+    float: right;
+}
+
+.footer {
+    background-color: #404040;
+    color: rgba(255, 255, 255, 0.67) !important;
+
+}
+
+.ant-layout-content {
+    /*margin: 15px 8px 10px 8px !important;*/
+    overflow: initial;
+}
+
+.ant-breadcrumb {
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.newsCard {
+    margin: 0 8px 16px 8px;
+    height: 100px;
+    background-color: #404040;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.newsCard .img {
+    display: inline-block;
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    background-origin: content-box;
+}
+
+.newsCardContent {
+    display: inline-block;
+    float: left;
+    max-width: calc(100% - 100px);
+    height: 100px;
+    position: relative;
+}
+
+.newsCardTitle {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    word-break: break-all;
+    color: rgba(255, 255, 255, 0.87)
+}
+
+.newsCard .year {
+    position: absolute;
+    font-size: 14px;
+    bottom: 5px;
+    left: 10px;
+    color: rgba(255, 255, 255, 0.67);
+}
+
+.weather {
+    background-color: #ececec;
+    padding: 10px;
+}
+
+.weather .ant-card-head-title {
+    color: #108ee9;
+}
+
+.weather .ant-card-body {
+    padding: 5px;
+    text-align: center;
+    white-space: nowrap;
+    padding-bottom: 15px;
+}
+
+.weather p, .weather h3 {
+    cursor: default;
+}
+
+.weather .w_main img {
+    width: 50px;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.weather .w_main .big {
+    font-size: 24px;
+}
+
+.weather .w_col {
+    margin-top: 15px;
+}
+
+.weather .value {
+    font-weight: bolder;
+}
+
+.weather .w_col_b .desc {
+    color: #ccc;
+}
+
+/*手机端天气卡牌样式*/
+@media only screen and (max-width: 500px) {
+    #weather_card .ant-col-xs-12 {
+        width: 100%;
+    }
+
+    #weather_card .weather .ant-card-head {
+        width: 30%;
+        text-align: center;
+        float: left;
+        border: none;
+        line-height: 40px;
+    }
+
+    #weather_card .weather .ant-card-body {
+        width: 70%;
+        margin-left: 30%;
+        border-left: 1px solid #e9e9e9;
+    }
+
+    #weather_card .ant-col-24 {
+        position: absolute;
+        left: calc(-10px - 42%);
+        bottom: -5px;
+        width: 42%;
+        text-align: center;
+    }
+
+    #weather_card .ant-col-24 img {
+        width: 40px;
+        position: absolute;
+        top: -40px;
+        left: 30%;
+    }
+
+}
+
+/*手机端天气卡牌样式*/
+@media only screen and (max-width: 500px) {
+    .rightSide .it_col{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+.query {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 8px;
+}
+
+.query .ant-input {
+    margin-top: 20px;
+}
+
+.query img {
+    width: 50px;
+}
+
+.msg_i, .msg_u {
+    height: 50px;
+    margin-top: 20px;
+    clear: both;
+}
+
+.query .ant-popover-inner-content {
+    cursor: default;
+}
+
+.query .input {
+    clear: both;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+.msg_i .body, .msg_i .head_i {
+    float: left;
+}
+
+.msg_u .body, .msg_u .head_u {
+    float: right;
+}
+
+.query .body {
+    color: rgba(0, 0, 0, 0.65);
+    cursor: default;
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 8px 16px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 5px 10px;
+    max-width: calc(100% - 120px);
+}
+
+.query .body .angle {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    top: 10px;
+}
+
+.msg_i .angle {
+    border-right: 5px solid #fff;
+    border-left: none;
+    left: -5px;
+}
+
+.msg_u .angle {
+    border-right: none;
+    border-left: 5px solid #fff;
+    right: -5px;
+}
+
+.it_card {
+    position: relative;
+    margin: 8px;
+    height: 65px;
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    overflow: hidden;
+}
+
+.it_card:hover {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.it_card img {
+    margin: 5px;
+    margin-bottom: 2px;
+    width: 35px;
+    height: 35px;
+    float: left;
+}
+
+.it_card .tips {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.it_card .title {
+    float: left;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 13px;
+}
+
+.it_card .title a {
+    color: #404040;
+    text-decoration: none;
+}
+
+.it_card .title a:hover {
+    color: #108ee9;
+}
+
+.it_card .desc {
+    cursor: default;
+    margin: 5px;
+    clear: both;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.it_card .tips {
+    cursor: default;
+    width: 100px;
+    height: 14px;
+    line-height: 12px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: -12px;
+    bottom: 0;
+    transform-origin: right;
+    transform: rotate(-45deg);
+}
+.books .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.books .box img{
+    height: 200px;
+    width: auto;
+}
+.books .it_card{
+    height: auto;
+}
+.books .title{
+    /*display: none;*/
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 12px;
+    font-weight:normal;
+    margin:5px auto;
+}
+.books .desc{
+    display: none;
+}
+.books .tips{
+    width: 150px;
+    left: -55px;
+    top: -20px;
+}
+@media  only screen and (min-width: 1801px) {
+    .books .it_col{
+        width: 16.66666%;
+    }
+}
+@media  only screen and (max-width: 1800px) {
+    .books .it_col{
+        width: 20%;
+    }
+}
+@media  only screen and (max-width: 1400px) {
+    .books .it_col{
+        width: 25%;
+    }
+}
+@media  only screen and (max-width: 1000px) {
+    .books .it_col{
+        width: 33.33333%;
+    }
+}
+@media  only screen and (max-width: 600px) {
+    .books .it_col{
+        width: 50%;
+    }
+}
+@media  only screen and (max-width: 400px) {
+    .books .it_col{
+        width: 100%;
+    }
+}
+/*.books .ant-col-xs-12{*/
+    /*width: 30%;*/
+/*}*/
+
+
+
+
+
+
+.manageBtn{
+    float: right;
+}
+.form_box {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 0 20px;
+}
+
+.form_title {
+    font-size: 16px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.form_btn {
+    float: right;
+    margin-bottom: 20px !important;
+}
+
+.form_select {
+    margin-bottom: 20px;
+}
+
+.login-form{
+    max-width: 300px;
+    margin: 0 auto;
+}
+.login-form h2{
+    color: #108ee9;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.login-form .login-form-button{
+    float: right;
+}
+
+.login-form .ant-form-item{
+    margin-bottom: 40px;
+}
+.about .about_card{
+    margin: 16px 8px 0 8px;
+    min-height: calc(100vh - 100px);
+}
+.about_card h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.about_card p{
+    font-size: 14px;
+    line-height: 1.8em;
+}
+.weChat{
+    color: #108ee9;
+    cursor: pointer;
+}
