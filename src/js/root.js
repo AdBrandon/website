@@ -4,6 +4,7 @@ import {HashRouter} from 'react-router-dom';
 import {Provider} from 'react-redux'
 import {store} from './redux/reducer'
 
+
 import AsideComponent from "./aside/aside"
 import RightSideComponent from "./content/right_side"
 
@@ -40,4 +41,4 @@ class Root extends React.Component {
         )
     }
 }
-ReactDOM.render(<Root />, document.getElementById('app'))
+ReactDOM.render(<Root />, document.getElementById('app'));

@@ -4,10 +4,10 @@
 
 /src/index.js
 /src/js/environment.js
-src/bundle.js
-src/bundle.min.js
+#src/bundle.js
+#src/bundle.min.js
 #src/images/books/javascript03.jpg
 #src/images/community/cnblogs.ico
 #src/images/program/codepen.ico
 src/js/content/body.js.bak
-src/vendor.js
+#src/vendor.js

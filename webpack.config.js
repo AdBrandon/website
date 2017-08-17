@@ -41,13 +41,12 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false,output: {comments: false},compress: {warnings: false}}),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV),
             },
         }),
-
+        new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false,output: {comments: false},compress: {warnings: false}}),
     ],
 };
 
