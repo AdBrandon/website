@@ -16,6 +16,9 @@ export default class HomeQueryComponent extends React.Component {
 //逻辑处理
     chat(e) {
         const msg = e.target.value;
+        this.setState({
+            value: "",
+        });
         const that = this;
         let newMsg = this.state.msgs;
         newMsg.push({
@@ -32,7 +35,6 @@ export default class HomeQueryComponent extends React.Component {
                 return res.json();
             })
             .then(function (data) {
-                console.log(data)
                 if (data.msg === 'ok') {
                     const content = markup(data.result.content);
                     newMsg.push({

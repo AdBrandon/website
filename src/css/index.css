@@ -89,7 +89,6 @@
 }
 
 .ant-layout-content {
-    /*margin: 15px 8px 10px 8px !important;*/
     overflow: initial;
 }
 
@@ -101,9 +100,13 @@
 .newsCard {
     margin: 0 8px 16px 8px;
     height: 100px;
-    background-color: #404040;
+    background-color: #ffffff;
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05)
+}
+.newsCard:hover {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2)
 }
 
 .newsCard .img {
@@ -111,6 +114,7 @@
     float: left;
     height: 100px;
     width: 100px;
+    border-radius: 5px;
     background-size: cover;
     background-position: center;
     background-origin: content-box;
@@ -130,7 +134,8 @@
     margin-left: 10px;
     display: inline-block;
     word-break: break-all;
-    color: rgba(255, 255, 255, 0.87)
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.87)
 }
 
 .newsCard .year {
@@ -138,8 +143,36 @@
     font-size: 14px;
     bottom: 5px;
     left: 10px;
-    color: rgba(255, 255, 255, 0.67);
+    color: rgba(0, 0, 0, 0.67);
 }
+.newsCard .newsCardContent:first-child {
+    max-width: 100%;
+}
+
+.history_title{
+    padding: 10px;
+    color:rgba(0, 0, 0, 0.65);
+    font-weight: bold;
+    font-size: 12px;
+
+}
+/*.rightSideBody{*/
+    /*min-height: calc(100vh - 90px);*/
+    /*position: relative;*/
+    /*text-align:center*/
+/*}*/
+/*.index .query {*/
+
+    /*!*margin-top: 30vh;*!*/
+    /*position: absolute;*/
+    /*bottom:0;*/
+    /*margin: 0 auto;*/
+/*}*/
+/*.index .query input{*/
+    /*!*margin-top: 10vh;*!*/
+/*}*/
+
+
 
 .weather {
     background-color: #ececec;

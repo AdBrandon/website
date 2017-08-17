@@ -63,25 +63,26 @@ function mapStateToProps_weather(state) {
 }
 
 // UI组件传递动作，接收UI组件的submitForm方法
-function mapDispatchToProps_weather(dispatch, ownProps) {
+function mapDispatchToProps_weather(dispatch) {
     return {
-        getWeather: () => {
-            getIpFn(dispatch, ownProps)
+        getWeather: (ip) => {
+            // getIpFn(dispatch, ownProps)
             // submit(FormData, dispatch)
+            createWeather(ip, dispatch);
 
         }
     }
 }
 
 //获取客户端IP
-function getIpFn(dispatch, ownProps) {
+function getIpFn(dispatch) {
     var ip = null;
     const getIp = () => {
         var times = setTimeout(() => {
             try {
                 if (returnCitySN["cip"]) {
                     ip = returnCitySN["cip"]
-                    createWeather(ip, dispatch, ownProps);
+                    createWeather(ip, dispatch);
                 } else {
                     getIp();
                 }
@@ -94,7 +95,7 @@ function getIpFn(dispatch, ownProps) {
 }
 
 //通过IP，发送fetch
-function createWeather(ip, dispatch, ownProps) {
+function createWeather(ip, dispatch) {
     fetch(server.weatherAPI[0] + ip + server.weatherAPI[1], server.APPCODE)
         .then(res => {
             return res.json();
@@ -124,11 +125,6 @@ function createWeather(ip, dispatch, ownProps) {
         const now = [dataWeather.now];
         // 复制原有state
         let newState = {};
-        for (let key in ownProps) {
-            if (ownProps.hasOwnProperty(key)) {
-                newState[key] = ownProps[key]
-            }
-        }
         newState.cityInfo = info;
         newState.weather = weather;
         newState.now = now;

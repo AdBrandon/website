@@ -4,19 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>前端导航 - React响应式站点</title>
+    <title>前端导航 - 基于React的响应式单页应用</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta name="keywords" content="前端导航，网址导航，前端工具，前端框架，前端网站大全">
     <meta name="author" content="Brandon">
     <link rel="shortcut icon" href="src/images/favicon.ico">
     <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/loading.css">
 </head>
 
 <body>
-    <div id="app"></div>
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-    <script src="src/index.js"></script>
-
+    <div id="app">
+        <div class="loading">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+            <div class="bounce4"></div>
+            <div class="bounce5"></div>
+            <p>内容加载中。。。</p>
+        </div>
+    </div>
+    <script src="src/bundle.min.js"></script>
 </body>
 
 </html>

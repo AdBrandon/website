@@ -8,6 +8,7 @@ const MenuItemGroup = Menu.ItemGroup;
 const TabPane = Tabs.TabPane;
 
 export default class MenuComponent extends React.Component {
+
     render() {
         return (
             <Menu theme="dark" mode="inline"
@@ -28,6 +29,3 @@ export default class MenuComponent extends React.Component {
         );
     }
 }
-
-
-

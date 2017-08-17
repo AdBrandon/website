@@ -8,9 +8,11 @@ import HomeWeatherMainComponent from './home_weather_main';
 import {mapStateToProps_weather, mapDispatchToProps_weather} from '../../redux/connet'
 
 class HomeWeatherComponent extends React.Component {
-    componentDidMount() {
-        this.props.getWeather();
-    }
+    // componentDidMount() {
+    //     if(this.props.ip){
+    //         this.props.getWeather(this.props.ip);
+    //     }
+    // }
 
     createCityList() {
         return (
@@ -82,13 +84,18 @@ class HomeWeatherComponent extends React.Component {
     }
 
     render() {
-        return (
-            <Row>
-                {this.createCityList()}
-                {this.creatWeatherNow()}
-                {this.creatWeatherList()}
-            </Row>
-        )
-    }
+        if(this.props.ip && !this.ip){
+            this.ip = this.props.ip;
+            this.props.getWeather(this.props.ip);
+        }
+            return (
+                <Row className={this.props.ip}>
+                    {this.createCityList()}
+                    {this.creatWeatherNow()}
+                    {this.creatWeatherList()}
+                </Row>
+            )
+        }
+
 }
 export default connect(mapStateToProps_weather, mapDispatchToProps_weather)(HomeWeatherComponent)
