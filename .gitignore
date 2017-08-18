@@ -10,4 +10,7 @@
 #src/images/community/cnblogs.ico
 #src/images/program/codepen.ico
 src/js/content/body.js.bak
-#src/vendor.js
+src/vendor.js
+src/vendor.js.map
+src/bundle.js
+src/bundle.js.map

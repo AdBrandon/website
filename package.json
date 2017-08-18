@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --inline --hot",
     "build": "webpack --profile --progress --colors --display-error-details ",
-    "dev": "webpack  --display-modules --profile --progress --colors --display-error-details"
+    "dev": "webpack  --display-modules --profile --progress --colors --display-error-details",
+    "pro": "NODE_ENV=production webpack"
   },
   "author": "",
   "license": "ISC",
@@ -41,5 +42,9 @@
     "url-loader": "^0.5.9",
     "webpack": "^3.5.1",
     "webpack-dev-server": "^2.7.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babili-webpack-plugin": "^0.1.2"
   }
 }
