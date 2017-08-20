@@ -8,7 +8,6 @@ import {store} from './redux/reducer'
 import AsideComponent from "./aside/aside"
 import RightSideComponent from "./content/right_side"
 
-import 'antd/dist/antd.css'
 import {Layout} from 'antd';
 
 class Root extends React.Component {

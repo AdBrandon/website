@@ -2,16 +2,14 @@ const debug = process.env.NODE_ENV !== "production";
 const webpack = require('webpack');
 const path = require('path');
 const babili = require("babili-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     context: path.join(__dirname),
     devtool: "source-map",
-    // entry: "./src/js/root.js",
     entry: {
-        //业务代码
         bundle: path.resolve(__dirname, './src/js/root.js'),
-        //第三方库
-        vendor: ["react","react-dom","react-router-dom","react-redux"]
+        vendor: ["react","react-dom","react-router-dom","react-redux","isomorphic-fetch","es6-promise"]
     },
     module: {
         loaders: [
@@ -28,10 +26,6 @@ module.exports = {
             {test: /\.css$/, loader: 'style-loader!css-loader'}
         ],
     },
-    // output: {
-    //     path: __dirname,
-    //     filename: "./src/index.js"
-    // },
     output: {
         path: __dirname,
         publicPath: '/',
@@ -40,8 +34,6 @@ module.exports = {
     plugins: debug ? [] : [
         //将第三方库打包到vendor.js
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }),
-        // new webpack.optimize.DedupePlugin(),
-        // new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV),
@@ -49,6 +41,7 @@ module.exports = {
         }),
         new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false,output: {comments: false},compress: {warnings: false}}),
         new babili(),
+        new BundleAnalyzerPlugin(),
     ],
 };
 
