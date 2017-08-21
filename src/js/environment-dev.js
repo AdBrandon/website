@@ -7,7 +7,7 @@ const host = 'http://localhost:8033';
 //
 const website = {
     title:"前端导航",
-    url:"www.romcagenius.com",
+    url:"http://www.romcagenius.com",
     logo:"./src/images/logo.png",
     source:"https://github.com/AdBrandon/NavWebsite",
     email:"admin@vmail.cc",
