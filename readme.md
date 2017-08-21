@@ -4,14 +4,12 @@
 
 ## 项目地址
 
-[等待域名备案完成。。。](http://39.108.109.106/)
-
-
+[www.romcagenius.com](http://www.romcagenius.com/)
 
 ## 项目说明
 
-前端采用`React`
-ＵＩ采用`Ant Design`
-后台采用`Node.js`
-数据库采用`MongoDB`
-服务器使用`阿里云`
+- 前端使用`React`
+- ＵＩ使用`Ant Design`
+- 后台使用`Node.js`
+- 数据库使用`MongoDB`
+- 服务器使用`阿里云`
